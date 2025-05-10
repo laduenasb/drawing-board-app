@@ -1,0 +1,34 @@
+<div class="toolbar-container">
+  <div class="color-picker">
+    <div class="color-options">
+      <div
+        *ngFor="let color of colors"
+        class="color-option"
+        [style.background-color]="color"
+        [class.selected]="selectedColor() === color"
+        (click)="selectColor(color)"
+      ></div>
+    </div>
+  </div>
+
+  <div class="line-width-selector">
+    <ion-range
+      min="1"
+      max="20"
+      step="1"
+      [value]="lineWidth()"
+      (ionChange)="onLineWidthChange($event)"
+      color="primary"
+    >
+      <ion-label slot="start">1px</ion-label>
+      <ion-label slot="end">20px</ion-label>
+    </ion-range>
+  </div>
+
+  <div class="action-buttons">
+    <ion-button expand="block" color="primary" (click)="saveDrawing()">
+      <ion-icon name="download-outline" slot="start"></ion-icon>
+      Save Drawing
+    </ion-button>
+  </div>
+</div>
