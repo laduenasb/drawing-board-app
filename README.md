@@ -2,7 +2,7 @@
 
 A freehand drawing application built with Angular and Ionic that allows users to draw on a canvas element using mouse or touch input.
 
-![Drawing Board App](https://via.placeholder.com/800x450.png?text=Drawing+Board+App)
+![Drawing Board App](public/app-drawing-board.png)
 
 ## Features
 
